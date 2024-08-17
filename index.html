@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WELCOME TO MY PROFILE</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #626364;
+            color: #343a40; 
+        }
+
+        header {
+            background-color: #007bff; 
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header img {
+            border-radius: 50%;
+            width: 120px; 
+            height: 120px; 
+            object-fit: cover;
+            margin-top: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #343a40;
+        }
+
+        nav a {
+            color: #ffffff;
+            padding: 15px 20px;
+            text-decoration: none;
+            display: block;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: #495057; 
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff; 
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px; 
+        }
+
+        .content section {
+            display: none; 
+        }
+
+        .content section.active {
+            display: block; 
+        }
+
+        .content h2 {
+            border-bottom: 2px solid #007bff; 
+            padding-bottom: 5px;
+        }
+
+        .content p {
+            line-height: 1.6;
+        }
+
+        .hobby-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .hobby-list li {
+            background: #f8f9fa; 
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+        }
+
+        .contact-info a {
+            color: #007bff; 
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form label {
+            margin-top: 10px;
+        }
+
+        form input, form textarea {
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            border: 1px solid #ced4da; 
+            border-radius: 5px;
+        }
+
+        form button {
+            padding: 10px;
+            background-color: #007bff; 
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #0056b3; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>WELCOME TO MY PROFILE</h1>
+        <img src="ảnh/profile.jpg" alt="Phạm Trần Nhật Nam">
+    </header>
+    <nav>
+        <a href="#about" onclick="showSection('about')">Introduce</a>
+        <a href="#dob" onclick="showSection('dob')">Date of birth</a>
+        <a href="#hobbies" onclick="showSection('hobbies')">Hobbies</a>
+        <a href="#contact" onclick="showSection('contact')">Contact</a>
+        <a href="https://drive.google.com/file/d/1FJGy9uNgaual3kMPekhcpVQGSZofFDh1/view?usp=sharing" target="_blank">CV</a>
+    </nav>
+    <div class="content">
+        <section id="about" class="active">
+            <h2>Introduce</h2>
+            <p>Hello! My name is Pham Tran Nhat Nam, born and raised in Ho Chi Minh City. Currently, I am a college student with a strong passion for technology and sports.</p>
+            <p>I always try to learn and develop myself every day. I believe that hard work and display will help me achieve my future goals.</p>
+            <p>In my spare time, I enjoy reading books, learning about programming, and participating in sports activities.</p>
+        </section>
+        <section id="dob">
+            <h2>Date of birth</h2>
+            <p>I was born on October 7, 2004 in Ho Chi Minh City. My birthday falls under the sign of Libra, a zodiac sign known for its balance and harmony.</p>
+            <p>For me, my birthday is not only a special day of the year but also an occasion to look back on my achievements and set new goals for the future.</p>
+        </section>
+        <section id="hobbies">
+            <h2>Hobbies</h2>
+            <p>I have many different hobbies, from sports to creative activities. Here are some of my hobbies:</p>
+            <ul class="hobby-list">
+                <li id="boxing"><strong>Boxing:</strong> Boxing not only helps me exercise but also helps me develop discipline and perseverance.</li>
+                <li><strong>Read a book:</strong> I love reading books, especially books about technology and science fiction. Reading helps me expand my knowledge and imagination.</li>
+                <li><strong>Programming:</strong> I am passionate about programming and always looking to learn new programming languages. Programming helps me develop logical thinking and problem solving.</li>
+                <li id="football"><strong>Soccer:</strong> Soccer is my favorite sport since I was a child. It helps me develop physical strength, teamwork skills and healthy competition. And here is my favorite player:</li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Massages:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Send</button>
+            </form>
+            <div class="contact-info">
+                <p><strong>Address:</strong> Lê Văn Thịnh, TP Thủ Đức, TP Hồ Chí Minh</p>
+                <p><strong>Phone number:</strong> <a href="tel:0766705388">0766705388</a></p>
+                <p><strong>Email:</strong> <a href="mailto:nampham071004@gmail.com">nampham071004@gmail.com</a></p>
+                <p><strong>Facebook:</strong> 
+                    <a href="https://www.facebook.com/nambluej/" target="_blank">
+                        <i class="fab fa-facebook"></i> NAM PHAM
+                    </a>
+                </p>
+            </div>
+        </section>
+    </div>
+    <script src="PROFILE.js"></script>
+</body>
+</html>
